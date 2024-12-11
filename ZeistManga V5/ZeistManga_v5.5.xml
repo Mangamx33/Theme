@@ -16,21 +16,19 @@
     <meta content='blogger' name='generator'/>
     <meta expr:charset='data:blog.encoding'/>
     <meta content='unsafe-url' name='referrer'/>
-    <!-- Meta Kata Kunci -->
-    <meta expr:content='&quot;bahasa indonesia, manga, manhua, manhwa, komik, online, baca, &quot; + data:blog.pageName' name='keywords'/>
+    <!-- kind of comic -->
+    <meta expr:content='&quot; manga, manhua, manhwa, &quot; + data:blog.pageName' name='keywords'/>
     <meta expr:content='data:blog.title' property='article:tag'/>
-    <!-- Meta Deskripsi -->
+    <!-- kind of comic -->
     <meta expr:content='&quot;Baca Komik &quot; + data:blog.pageName + &quot; Bahasa Indonesia&quot;' property='og:description'/>
     <meta expr:content='&quot;Baca Komik &quot; + data:blog.pageName + &quot; Bahasa Indonesia&quot;' name='description'/>
     <!-- Meta Judul -->
     <b:if cond='data:view.isHomepage'>
-      <title><data:view.title.escaped/> - Baca Komik Online Bahasa Indonesia</title>
       <meta expr:content='data:view.title' property='og:title'/>
       <meta expr:content='data:view.title' property='og:image:alt'/>
       <meta expr:content='data:view.title' name='twitter:title'/>
       <meta expr:content='data:view.title' name='twitter:image:alt'/>
       <b:elseif cond='data:view.isPost'/>
-      <title><data:blog.pageName/> - Baca Komik Online Bahasa Indonesia</title>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:title'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:image:alt'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:title'/>
@@ -109,10 +107,10 @@
 </Group>
 */
 /*!************************************************
-* Name		: ZeistManga
+* Name		: mangamx_33
 * Version	: 5.5.4
 * Revisi	: 2024
-* Website	: emissionhex.blogspot.com
+* Website	: mangamx_33.blogspot.com
 **************************************************/
 :root {
   --primary-color: $(keycolor);
@@ -424,7 +422,6 @@ a:hover,.infolimit a,::marker{color:$(keycolor)}
 .PageList [data]:before{margin-right:5px;vertical-align:sub}
 [data="Series"]:before {content: url('https://api.iconify.design/ic:twotone-grid-view.svg?color=rgba(255,255,255,.6)&height=16');}
 [data="Home"]:before {content: url('https://api.iconify.design/ant-design:home-twotone.svg?color=rgba(255,255,255,.6)&height=16');}
-[data="Komik"]::before {content: url('https://api.iconify.design/bx/bxs-book-reader.svg?color=rgba(255,255,255,.6)&height=16');}
 [data="Manga List"]::before {content: url('https://api.iconify.design/bx/bx-list-minus.svg?color=rgba(255,255,255,.6)&height=16');}
 [data="Bookmark"]::before {content: url('https://api.iconify.design/fluent/library-20-filled.svg?color=rgba(255,255,255,.6)&height=16');}
 .chap-by-tag a:visited{color:gray}
@@ -958,7 +955,7 @@ i.icon-star.silver:before,i.icon-star.silver:before{content:&#39;&#39;;width:17p
 .comments li .comment-replies .comment-reply{width:calc(100% - 55px);display:flex;align-items:center;}
 .comments li .comment-replybox-single{margin-top:20px}
 .comments li li{display:flex;align-items:flex-start;flex-wrap:wrap;padding:0;background-color:transparent;box-shadow:none}
-.comments li li:not(:last-child){margin-bottom:10px}
+.comments li li:(:last-child){margin-bottom:10px}
 .comments li li .avatar-image-container{width:32px;height:32px}
 .comments li li .comment-block{width:calc(100% - 40px);margin-left:auto;padding:0 15px 15px;background-color:#f7f9f8;border-radius:15px}
 .comments li li .comment-header{height:initial;margin:0 0 10px;padding:0}
@@ -1111,7 +1108,7 @@ i.icon-star.silver:before,i.icon-star.silver:before{content:&#39;&#39;;width:17p
 .widget-history li{padding:0;border-bottom:1px solid  rgb(236,236,236);}
 .widget-history a{padding:7px 15px;display:block;line-height:20px;transition:.2s linear;font-size:13px;}
 .widget-history li:hover a{color:white;}
-.widget-history li:hover{background-color:$(keycolor);transition:.2s linear;}
+.widget-history li:hover{background-color:(keycolor);transition:.2s linear;}
 .dark-mode .widget-history li{border-bottom-color:#333;}
 .widget-history li:last-child{border-bottom:none;}
 
@@ -1382,12 +1379,11 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
     </b:defaultmarkups>
     <b:if cond='data:view.isPost'>
       <script>/*<![CDATA[*/ 
-  document.getElementById('there').appendChild(
     document.getElementById('download')
   ); 
 /*]]>*/</script>
       <script>/*<![CDATA[*/ 
-  document.getElementById('myhero').appendChild(
+  document.getElementById('myhero')
     document.getElementById('custom-hero')
   ); 
 /*]]>*/</script>
@@ -1694,7 +1690,7 @@ console.log(`${label} & ${lang}`);
 </script>
       <script type='text/javascript'>/*<![CDATA[*/
 const mTP={shuffleArray:t=>{var e,i,n=t.length;if(0===n)return!1;for(;--n;)e=Math.floor(Math.random()*(n+1)),i=t[n],t[n]=t[e],t[e]=i;return t},run:(t,e,i=10,n=5)=>{if(0==t("#mTP_Slider").length)return console.log("Tag mTP_Slider tidak ada");mTP.maxCat=n,mTP.max=i,window.matchMedia("(max-width: 600px)").matches&&(mTP.maxCat=3),window.matchMedia("(max-width: 480px)").matches&&(mTP.maxCat=2);const a=0==e?"":`/-/${e}`;t.ajax({url:`/feeds/posts/default${a}?alt=json-in-script&max-results=150`,type:"get",dataType:"jsonp",success:function(e){mTP.compile(t,e)},error:function(t){console.log(t)}})},compile:(t,e)=>{if("entry"in e.feed){const n=mTP.shuffleArray(e.feed.entry);mTP.filter=mTP.shuffleArray(e.feed.category.map(t=>t.term).filter(t=>{if(mTP.Select.includes(t))return t})).slice(0,mTP.maxCat),mTP.obj={},t.each(mTP.filter,function(e,i){n.filter(e=>{const n=e.category.map(t=>t.term);if(n.includes(i)){const a=mTP.obj[i];a?a.length<mTP.max&&a.push({title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}):mTP.obj[i]=[{title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}]}})});const a=t('<div class="series-gen"><div class="head"><div class="r-title"></div><ul class="nav-tabs tabs tab r2"></ul></div><div class="listupd"></div></div>'),l=Object.keys(mTP.obj).sort().reduce((t,e)=>(t[e]=mTP.obj[e],t),{});for(var i in l){const e=i.replace(/\W/g,"");a.find(".nav-tabs").append(`<li><span data-id="series-${e}">${i}</span></li>`),a.find(".listupd").append(`<div id="series-${e}" class="customAF scroll"><div class="inner scrolling"></div>${mTP.btnPrev}${mTP.btnNext}</div>`),t.each(mTP.obj[i],function(){a.find(`#series-${e} .inner`).append(`<article class="customAgata">\n          <a href="${this.link}" title="${this.title}">\n            <div class="images">\n              <figure>\n                <img src="${this.image}" alt="${this.title}">\n              </figure>\n            </div>\n            <h2 class="entry-title">${this.title}</h2>\n          </a>\n        </article>`)})}t("#mTP_Slider").html(a),t(".nav-tabs li").click(function(){const e=t(this).find("span").attr("data-id");t(".customAF.scroll, .nav-tabs li").each(function(){t(this).attr("id")==e||t(this).find("span").attr("data-id")==e?t(this).addClass("active"):t(this).removeClass("active")})}),t(".nav-tabs li").first().click()}},sN:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft+=i},sB:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft-=i},btnNext:'<button onclick="mTP.sN(this)" class="scrollButton right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M15.713 12l-6.01-6.01l-1.415 1.414l4.6 4.6l-4.6 4.593l1.414 1.414L15.713 12z" fill="currentColor"/></g></svg></button>',btnPrev:'<button onclick="mTP.sB(this)" class="scrollButton left"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M8.288 12l6.01 6.01l1.414-1.414l-4.6-4.6l4.6-4.6l-1.414-1.406L8.288 12z" fill="currentColor"/></g></svg></button>',iSize:"w207-h300",noImage:"https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png"};
-mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Game", "Harem", "Historical", "Isekai", "Horror", "Josei", "Magic", "Mecha", "Military", "Music", "Mystery", "Parody", "Police", "Psychological", "Romance", "Samurai", "School", "School Life", "Sci-Fi", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Slice of Life", "Space", "Sports", "Super Power", "Supernatural", "Thriller", "Vampire", "Yuri"];
+mTP.Select = ["Action", "Adventure", "Comedy", "Drama","Fantasy", "Game","Historical", "Horror", "Magic","Military", "Music", "Mystery", "Parody", "Police", "Psychological", "Samurai", "School", "School Life", "Sci-Fi", "Seinen","Shounen", "Slice of Life", "Space", "Sports", "Super Power", "Supernatural", "Thriller", "Vampire"];
 /*]]>*/</script>
     </b:if>
     <script type='text/javascript'>/*<![CDATA[*/
@@ -1753,10 +1749,10 @@ $(widget).remove();
     <script>/*<![CDATA[*/ (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#modeSwitch').classList.add('dark-mode') : document.querySelector('#modeSwitch').classList.remove('dark-mode') /*]]>*/</script>
 
     <b:with value='[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0-9&quot;]' var='Alphabet'>
-      <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Isekai&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Sci-Fi&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
-        <b:with value='[&quot;Adaptation&quot;,&quot;Cooking&quot;,&quot;Harem&quot;,&quot;Loli&quot;,&quot;Mafia&quot;,&quot;Magic&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Reincarnation&quot;,&quot;Reverse Harem&quot;,&quot;Samurai&quot;,&quot;School Life&quot;,&quot;Supernatural&quot;,&quot;Survival&quot;,&quot;Time Travel&quot;,&quot;Vampire&quot;,&quot;Video Games&quot;,&quot;Demon&quot;,&quot;Monsters&quot;,&quot;Martial Arts&quot;,&quot;Virtual Reality&quot;,&quot;Demons&quot;,&quot;Monster Girls&quot;,&quot;Monsters&quot;,&quot;Police&quot;]' var='Genre2'>
-          <b:with value='[&quot;Shounen&quot;,&quot;Shoujo&quot;,&quot;Seinen&quot;,&quot;Josei&quot;,&quot;Mature&quot;]' var='Demographic'>
-            <b:with value='[&quot;Ecchi&quot;,&quot;Gore&quot;,&quot;Sexual Violence&quot;,&quot;Smut&quot;,&quot;Series&quot;,&quot;Project&quot;]' var='Content'>
+      <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;,&quot;Sci-Fi&quot;,&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
+        <b:with value='[&quot;Adaptation&quot;,&quot;Cooking&quot;,&quot;,&quot;Loli&quot;,&quot;Mafia&quot;,&quot;Magic&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Reincarnation&quot;,&quot;,&quot;Samurai&quot;,&quot;School Life&quot;,&quot;Supernatural&quot;,&quot;Survival&quot;,&quot;Time Travel&quot;,&quot;Vampire&quot;,&quot;Video Games&quot;,&quot;Demon&quot;,&quot;Monsters&quot;,&quot;Martial Arts&quot;,&quot;Virtual Reality&quot;,&quot;Demons&quot;,&quot;Monster Girls&quot;,&quot;Monsters&quot;,&quot;Police&quot;]' var='Genre2'>
+          <b:with value='[&quot;Shounen&quot;,&quot;,&quot;Seinen&quot;,&quot;,&quot;Mature&quot;]' var='Demographic'>
+            <b:with value='[&quot;Ecchi&quot;,&quot;Gore&quot;,&quot;,&quot;Smut&quot;,&quot;Series&quot;,&quot;Project&quot;]' var='Content'>
               <b:with value='[&quot;Chapter&quot;,&quot;Novel&quot;,&quot;Ongoing&quot;,&quot;Hot&quot;,&quot;New&quot;,&quot;Color&quot;]' var='Other'>
                 <b:with value='[&quot;Light Novel (JP)&quot;,&quot;Web Novel (CN)&quot;,&quot;Web Novel (JP)&quot;,&quot;Web Novel (KR)&quot;,&quot;Manga&quot;,&quot;Manhua&quot;,&quot;Manhwa&quot;,&quot;Doujinshi&quot;,&quot;Long Strip&quot;,&quot;Full Color&quot;,&quot;One Shot&quot;,&quot;Web Comic&quot;,&quot;Official Colored&quot;,&quot;Jepang&quot;,&quot;Korea&quot;,&quot;Cina&quot;,&quot;Indonesia&quot;,&quot;Webtoon&quot;,&quot;Webtoons&quot;,&quot;WN&quot;,&quot;LN&quot;]' var='Format'>
                   <b:with value='[&quot;Ongoing&quot;,&quot;Completed&quot;,&quot;Cancelled&quot;,&quot;Hiatus&quot;,&quot;Dropped&quot;,&quot;Coming Soon&quot;]' var='Status'>
@@ -1931,7 +1927,6 @@ $(widget).remove();
                         <b:widget id='Text4' locked='false' title='Global Notification' type='Text' version='2' visible='false'>
                           <b:widget-settings>
                             <b:widget-setting name='content'><![CDATA[Download <span class="p-5 bg-171 r2"><a class="c-fff" href="
-https://cararegistrasi.com/zeistmanga
 ">ZeistManga</a> v4</span>]]></b:widget-setting>
                           </b:widget-settings>
                           <b:includable id='main'>
@@ -2601,10 +2596,6 @@ related.run('/feeds/posts/default', _related);
                         <label for='Drama'>Drama</label>
                       </li>
                       <li>
-                        <input class='genre' id='Ecchi' type='checkbox' value='Ecchi'/>
-                        <label for='Ecchi'>Ecchi</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Fantasy' type='checkbox' value='Fantasy'/>
                         <label for='Fantasy'>Fantasy</label>
                       </li>
@@ -2613,20 +2604,12 @@ related.run('/feeds/posts/default', _related);
                         <label for='Game'>Game</label>
                       </li>
                       <li>
-                        <input class='genre' id='Harem' type='checkbox' value='Harem'/>
-                        <label for='Harem'>Harem</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Historical' type='checkbox' value='Historical'/>
                         <label for='Historical'>Historical</label>
                       </li>
                       <li>
                         <input class='genre' id='Horror' type='checkbox' value='Horror'/>
                         <label for='Horror'>Horror</label>
-                      </li>
-                      <li>
-                        <input class='genre' id='Josei' type='checkbox' value='Josei'/>
-                        <label for='Josei'>Josei</label>
                       </li>
                       <li>
                         <input class='genre' id='Magic' type='checkbox' value='Magic'/>
@@ -2665,10 +2648,6 @@ related.run('/feeds/posts/default', _related);
                         <label for='Psychological'>Psychological</label>
                       </li>
                       <li>
-                        <input class='genre' id='Romance' type='checkbox' value='Romance'/>
-                        <label for='Romance'>Romance</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Samurai' type='checkbox' value='Samurai'/>
                         <label for='Samurai'>Samurai</label>
                       </li>
@@ -2683,14 +2662,6 @@ related.run('/feeds/posts/default', _related);
                       <li>
                         <input class='genre' id='Seinen' type='checkbox' value='Seinen'/>
                         <label for='Seinen'>Seinen</label>
-                      </li>
-                      <li>
-                        <input class='genre' id='Shoujo' type='checkbox' value='Shoujo'/>
-                        <label for='Shoujo'>Shoujo</label>
-                      </li>
-                      <li>
-                        <input class='genre' id='Shoujo Ai' type='checkbox' value='Shoujo Ai'/>
-                        <label for='Shoujo Ai'>Shoujo Ai</label>
                       </li>
                       <li>
                         <input class='genre' id='Shounen' type='checkbox' value='Shounen'/>
@@ -2783,8 +2754,6 @@ related.run('/feeds/posts/default', _related);
                     <label class='dropdown-toggle' data-toggle='dropdown' for='Lang'> Language <span class='value' data-label-placement='true'>All</span> </label>
                     <ul class='dropdown-menu lg c1'>
                       <li>
-                        <input class='genre' id='Indonesian' type='checkbox' value='Indonesian'/>
-                        <label for='Indonesian'>Indonesian</label>
                       </li>
                       <li>
                         <input class='genre' id='English' type='checkbox' value='English'/>
@@ -4331,7 +4300,6 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                                       <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Web Novel (JP)?&amp;max-results=20&quot;'>Web Novel (JP)</a></dd>
                                       <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Web Novel (KR)?&amp;max-results=20&quot;'>Web Novel (KR)</a></dd>
                                       <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Web Novel (CN)?&amp;max-results=20&quot;'>Web Novel (CN)</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Doujinshi?&amp;max-results=20&quot;'>Doujinshi</a></dd>
                                     </div>
                                   </dl>
 
@@ -4565,10 +4533,6 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <label for='Drama'>Drama</label>
                       </li>
                       <li>
-                        <input class='genre' id='Ecchi' type='checkbox' value='Ecchi'/>
-                        <label for='Ecchi'>Ecchi</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Fantasy' type='checkbox' value='Fantasy'/>
                         <label for='Fantasy'>Fantasy</label>
                       </li>
@@ -4577,20 +4541,12 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <label for='Game'>Game</label>
                       </li>
                       <li>
-                        <input class='genre' id='Harem' type='checkbox' value='Harem'/>
-                        <label for='Harem'>Harem</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Historical' type='checkbox' value='Historical'/>
                         <label for='Historical'>Historical</label>
                       </li>
                       <li>
                         <input class='genre' id='Horror' type='checkbox' value='Horror'/>
                         <label for='Horror'>Horror</label>
-                      </li>
-                      <li>
-                        <input class='genre' id='Josei' type='checkbox' value='Josei'/>
-                        <label for='Josei'>Josei</label>
                       </li>
                       <li>
                         <input class='genre' id='Magic' type='checkbox' value='Magic'/>
@@ -4629,10 +4585,6 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <label for='Psychological'>Psychological</label>
                       </li>
                       <li>
-                        <input class='genre' id='Romance' type='checkbox' value='Romance'/>
-                        <label for='Romance'>Romance</label>
-                      </li>
-                      <li>
                         <input class='genre' id='Samurai' type='checkbox' value='Samurai'/>
                         <label for='Samurai'>Samurai</label>
                       </li>
@@ -4648,15 +4600,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <input class='genre' id='Seinen' type='checkbox' value='Seinen'/>
                         <label for='Seinen'>Seinen</label>
                       </li>
-                      <li>
-                        <input class='genre' id='Shoujo' type='checkbox' value='Shoujo'/>
-                        <label for='Shoujo'>Shoujo</label>
-                      </li>
-                      <li>
-                        <input class='genre' id='Shoujo Ai' type='checkbox' value='Shoujo Ai'/>
-                        <label for='Shoujo Ai'>Shoujo Ai</label>
-                      </li>
-                      <li>
+                      <li> 
                         <input class='genre' id='Shounen' type='checkbox' value='Shounen'/>
                         <label for='Shounen'>Shounen</label>
                       </li>
@@ -6149,7 +6093,6 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                                 <b:widget-setting name='link-34'>search/label/Thriller</b:widget-setting>
                                 <b:widget-setting name='text-28'>Seinen</b:widget-setting>
                                 <b:widget-setting name='link-37'>search/label/Vampire</b:widget-setting>
-                                <b:widget-setting name='text-29'>Shoujo</b:widget-setting>
                                 <b:widget-setting name='link-36'>search/label/Vampire</b:widget-setting>
                                 <b:widget-setting name='text-22'>Music</b:widget-setting>
                                 <b:widget-setting name='link-31'>search/label/Slice of Life</b:widget-setting>
@@ -6157,17 +6100,14 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                                 <b:widget-setting name='link-30'>search/label/Shounen</b:widget-setting>
                                 <b:widget-setting name='text-24'>Psychological</b:widget-setting>
                                 <b:widget-setting name='link-33'>search/label/Supernatural</b:widget-setting>
-                                <b:widget-setting name='text-25'>Romance</b:widget-setting>
                                 <b:widget-setting name='link-32'>search/label/Sports</b:widget-setting>
                                 <b:widget-setting name='text-9'>Historical</b:widget-setting>
-                                <b:widget-setting name='text-8'>Harem</b:widget-setting>
                                 <b:widget-setting name='text-20'>Medical</b:widget-setting>
                                 <b:widget-setting name='text-21'>Military</b:widget-setting>
                                 <b:widget-setting name='text-1'>Adventure</b:widget-setting>
                                 <b:widget-setting name='text-0'>Action</b:widget-setting>
                                 <b:widget-setting name='text-3'>Cooking</b:widget-setting>
                                 <b:widget-setting name='text-2'>Comedy</b:widget-setting>
-                                <b:widget-setting name='text-5'>Ecchi</b:widget-setting>
                                 <b:widget-setting name='text-4'>Drama</b:widget-setting>
                                 <b:widget-setting name='text-7'>Game</b:widget-setting>
                                 <b:widget-setting name='text-6'>Fantasy</b:widget-setting>
@@ -6176,8 +6116,6 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                                 <b:widget-setting name='text-16'>Martial Arts</b:widget-setting>
                                 <b:widget-setting name='text-17'>Mature</b:widget-setting>
                                 <b:widget-setting name='text-18'>Mecha</b:widget-setting>
-                                <b:widget-setting name='text-11'>Isekai</b:widget-setting>
-                                <b:widget-setting name='text-12'>Josei</b:widget-setting>
                                 <b:widget-setting name='text-13'>Magic</b:widget-setting>
                                 <b:widget-setting name='text-14'>Manhua</b:widget-setting>
                                 <b:widget-setting name='text-10'>Horror</b:widget-setting>
@@ -6189,28 +6127,22 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                                 <b:widget-setting name='link-1'>/search/label/Adventure</b:widget-setting>
                                 <b:widget-setting name='link-13'>/search/label/Magic</b:widget-setting>
                                 <b:widget-setting name='link-2'>/search/label/Comedy</b:widget-setting>
-                                <b:widget-setting name='link-12'>/search/label/Josei</b:widget-setting>
                                 <b:widget-setting name='link-15'>/search/label/Manhwa</b:widget-setting>
                                 <b:widget-setting name='link-0'>/search/label/Action</b:widget-setting>
                                 <b:widget-setting name='link-14'>/search/label/Manhua</b:widget-setting>
-                                <b:widget-setting name='link-11'>/search/label/Isekai</b:widget-setting>
                                 <b:widget-setting name='link-10'>/search/label/Horror</b:widget-setting>
                                 <b:widget-setting name='link-9'>/search/label/Historical</b:widget-setting>
                                 <b:widget-setting name='link-7'>/search/label/Game</b:widget-setting>
-                                <b:widget-setting name='link-8'>/search/label/Harem</b:widget-setting>
-                                <b:widget-setting name='link-5'>/search/label/Ecchi</b:widget-setting>
                                 <b:widget-setting name='link-6'>/search/label/Fantasy</b:widget-setting>
                                 <b:widget-setting name='link-3'>/search/label/Cooking</b:widget-setting>
                                 <b:widget-setting name='link-4'>/search/label/Drama</b:widget-setting>
                                 <b:widget-setting name='link-28'>search/label/Seinen</b:widget-setting>
                                 <b:widget-setting name='link-27'>search/label/Sci-Fi</b:widget-setting>
-                                <b:widget-setting name='link-29'>search/label/Shoujo</b:widget-setting>
                                 <b:widget-setting name='link-24'>search/label/Psychological</b:widget-setting>
                                 <b:widget-setting name='text-37'>Vampire</b:widget-setting>
                                 <b:widget-setting name='link-23'>/search/label/Mystery</b:widget-setting>
                                 <b:widget-setting name='text-38'>Vampire</b:widget-setting>
                                 <b:widget-setting name='link-26'>search/label/School Life</b:widget-setting>
-                                <b:widget-setting name='link-25'>search/label/Romance</b:widget-setting>
                                 <b:widget-setting name='link-20'>/search/label/Medical</b:widget-setting>
                                 <b:widget-setting name='text-33'>Supernatural</b:widget-setting>
                                 <b:widget-setting name='text-34'>Thriller</b:widget-setting>
@@ -6251,7 +6183,7 @@ Genre
       <b:section id='footer' maxwidgets='3' showaddelement='true'>
         <b:widget id='PageList2' locked='true' title='Pages' type='PageList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"https://zeistmanga-bt.blogspot.com/search/label/Blog","position":1,"title":"Blog"},"link0":{"href":"https://zeistmanga-bt.blogspot.com/search/label/A-Z","position":0,"title":"A-Z"}}]]></b:widget-setting>
+            <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"https://mangamx_33-bt.blogspot.com/search/label/Blog","position":1,"title":"Blog"},"link0":{"href":"https://mangamx_33-bt.blogspot.com/search/label/A-Z","position":0,"title":"A-Z"}}]]></b:widget-setting>
             <b:widget-setting name='homeTitle'>Beranda</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
@@ -6400,39 +6332,6 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
-</script>
-    </b:if>
-    <script>/*<![CDATA[*/ 
-  document.getElementById('there').appendChild(
-    document.getElementById('download')
-  );
-/*]]>*/</script>
-
-      <script>/*<![CDATA[*/ 
-  let Data_extra = document.querySelector("#extra-info");
-  let Target_extra = document.querySelector("#extra-target");
-  Data_extra && (Data_extra ? Target_extra.appendChild(Data_extra) : ""); 
-/*]]>*/</script>
-    <script>/*<![CDATA[*/ 
-  let Data_syn = document.querySelector("#synopsis");
-  let Target_syn = document.querySelector("#syn-target");
-  Data_syn && (Data_syn ? Target_syn.appendChild(Data_syn) : ""); 
-/*]]>*/</script>
-    <script>/*<![CDATA[*/ 
-  document.getElementById('character-target').appendChild(
-    document.getElementById('character')
-  ); 
-/*]]>*/</script>
-    <script>/*<![CDATA[*/ 
-document.getElementById('cl').appendChild(
-    document.getElementById('downloadlist')
-  ); 
-/*]]>*/</script>
-    <script>/*<![CDATA[*/ 
-  document.getElementById('myhero').appendChild(
-    document.getElementById('custom-hero')
-  ); 
 /*]]>*/</script>
     
     <script>/*<![CDATA[*/
